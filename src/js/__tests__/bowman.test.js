@@ -12,4 +12,3 @@ test('Персонаж Лучник успешно создан!', () => {
   };
   expect(character).toMatchObject(result);
 });
-

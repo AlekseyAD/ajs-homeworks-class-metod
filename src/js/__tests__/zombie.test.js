@@ -1,4 +1,4 @@
-import Character from '../Zombie';
+import Character from '../zombie';
 
 test('Персонаж Зомби успешно создан!', () => {
   const character = new Character('Noah', 'Zombie');

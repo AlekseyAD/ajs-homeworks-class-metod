@@ -1,4 +1,4 @@
-import Character from '../Undead';
+import Character from '../undead';
 
 test('Персонаж Нежить успешно создан!', () => {
   const character = new Character('Noah', 'Undead');

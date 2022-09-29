@@ -1,21 +1,21 @@
 export default class Character {
   constructor(name, type) {
     if (name.length < 2 || name.length > 10) {
-      throw new Error("Имя должно содержать не менее 2 и не более 10 символов");
+      throw new Error('Имя должно содержать не менее 2 и не более 10 символов');
     } else {
       this.name = name;
     }
 
     const types = [
-      "Bowman",
-      "Swordsman",
-      "Magician",
-      "Daemon",
-      "Undead",
-      "Zombie",
+      'Bowman',
+      'Swordsman',
+      'Magician',
+      'Daemon',
+      'Undead',
+      'Zombie',
     ];
     if (types.indexOf(type) === -1) {
-      throw new Error("Такой класс отсутствует!!!");
+      throw new Error('Такой класс отсутствует!!!');
     } else {
       this.type = type;
     }
@@ -33,7 +33,7 @@ export default class Character {
       this.defence *= 1.2;
       this.health = 100;
     } else {
-      throw new Error("Нельзя повысить левел умершего");
+      throw new Error('Нельзя повысить левел умершего');
     }
   }
 

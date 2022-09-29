@@ -1,15 +1,21 @@
 import Character from '../character';
 
 test('Создаем имя меньше двух символов', () => {
-  expect(() => new Character('К', 'Bowman')).toThrowError(new Error('Имя должно содержать не менее 2 и не более 10 символов'));
+  expect(() => new Character('К', 'Bowman')).toThrowError(
+    new Error('Имя должно содержать не менее 2 и не более 10 символов'),
+  );
 });
 
 test('Создаем имя больше 10 символов', () => {
-  expect(() => new Character('фвафвацу232к3ацвавапв', 'Bowman')).toThrowError(new Error('Имя должно содержать не менее 2 и не более 10 символов'));
+  expect(() => new Character('фвафвацу232к3ацвавапв', 'Bowman')).toThrowError(
+    new Error('Имя должно содержать не менее 2 и не более 10 символов'),
+  );
 });
 
 test('Ошибка создания класса', () => {
-  expect(() => new Character('Noah', 'Muggle')).toThrowError(new Error('Такой класс отсутствует!!!'));
+  expect(() => new Character('Noah', 'Muggle')).toThrowError(
+    new Error('Такой класс отсутствует!!!'),
+  );
 });
 
 test('Создаем имя персонажа', () => {
@@ -36,7 +42,9 @@ test('Создаем нового персонажа', () => {
 test('Повышаем уровень персонажа со здоровьем 0', () => {
   const character = new Character('Noah', 'Magician');
   character.health = 0;
-  expect(() => character.levelUp()).toThrowError(new Error('Нельзя повысить левел умершего'));
+  expect(() => character.levelUp()).toThrowError(
+    new Error('Нельзя повысить левел умершего'),
+  );
 });
 
 test('Повышаем уровень персонажа со здоровьем больше 0', () => {

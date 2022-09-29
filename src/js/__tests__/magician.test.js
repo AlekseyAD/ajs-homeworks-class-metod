@@ -1,4 +1,4 @@
-import Character from '../Magician';
+import Character from '../magician';
 
 test('Персонаж Волшебник успешно создан!', () => {
   const character = new Character('Noah', 'Magician');
